@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Horizontal Form</h4>
+                    <p class="card-description"> Horizontal form layout </p>
+                    <form class="forms-sample" method="post" action="{% url 'newsave' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                      <div class="form-group row">
+                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">name</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Username" name="name">
+                        </div>
+                      </div>
+<!--                       <div class="from-group">-->
+<!--                          <label for="exampleformcontrolselect2" class="col-sm-3 col-form-label">name</label>-->
+<!--                              <select class="form-control" name="name">-->
+<!--                                <option>select</option>-->
+<!--                                  {% for d in data %}-->
+<!--                                       <option>{{d.name}}</option>-->
+<!--                                  {% endfor %}-->
+<!--                              </select><br><br>-->
+<!--                            </div>-->
+                      <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
+                        <div class="col-sm-9">
+                          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email" name="email">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="exampleInputMobile" class="col-sm-3 col-form-label">Mobile</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="exampleInputMobile" placeholder="Mobile number" name="mob">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Password</label>
+                        <div class="col-sm-9">
+                          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" name="pas">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">Re Password</label>
+                        <div class="col-sm-9">
+                          <input type="password" class="form-control" id="exampleInputConfirmPassword2" placeholder="Password" name="passwd">
+                        </div>
+                      </div>
+                      <div>
+                            <input type="file" name="image">
+                        </div>
+                      <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                      <button class="btn btn-dark">Cancel</button>
+                    </form>
+                  </div>
+                </div>
+</body>
+</html>
+{% endblock %}

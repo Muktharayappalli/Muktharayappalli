@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div>
+    <form class="md-float-material" method="post" action="{% url 'adminlogin' %}" enctype="multipart/form-data">
+  {% csrf_token %}
+    <input type="text" placeholder="username" name="username"><br><br>
+    <input type="password" placeholder="password" name="password"><br><br>
+  <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+    </form>
+  </div>
+
+
+</body>
+</html>

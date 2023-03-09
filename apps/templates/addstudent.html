@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><form class="form-sample" method="post" action="{% url 'savedata' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+<center><h1>SAPLES</h1></center>
+    <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">CUSTOMER DETAILS</h4>
+                    <p class="card-description"> Basic form layout </p>
+                    <form class="form-sample" method="post" action="{% url 'savedata' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                      <div class="form-group">
+                        <label for="exampleInputUsername1">name</label>
+                        <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username" name="name">
+                      </div>
+                        <div class="form-group">
+                        <label for="exampleInputUsername1">age</label>
+                        <input type="text" class="form-control" id="exampleInputUsername1" placeholder="age" name="age">
+                        </div>
+                        <div>
+                            <input type="file" name="image">
+                        </div>
+                        <button type="submit" class="btn-primary mr-2">submit</button>
+                      <button class="btn btn-dark">Cancel</button>
+                    </form>
+                  </div>
+                </div>
+    </div>
+</body>
+</html>
+{% endblock %}
